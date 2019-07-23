@@ -222,6 +222,7 @@ class SIFormState extends State<SIForm> {
     String result =
         'After $term years, your investment will be worth $totalAmount $currentValue';
     return result;
+
   }
 
   void _reset() {
@@ -230,5 +231,7 @@ class SIFormState extends State<SIForm> {
     tController.text = '';
     displayResult = '';
     currentValue = _currency[0];
+
+
   }
 }

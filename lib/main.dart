@@ -73,7 +73,7 @@ class SIFormState extends State<SIForm> {
                     labelText: 'Principal',
                     labelStyle: textStyle,
                     hintText: 'Enter Principal eg.15000',
-                    //errorStyle: TextStyle(fontSize: 15.0,color: Colors.yellowAccent),
+                    errorStyle: TextStyle(fontSize: 15.0,color: Colors.yellowAccent),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0))),
               ),
@@ -95,7 +95,7 @@ class SIFormState extends State<SIForm> {
                     labelStyle: textStyle,
                     hintText: 'Enter Interest Rate eg.8',
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0))),
+                    borderRadius: BorderRadius.circular(5.0))),
               ),
             ),
             Padding(
@@ -108,7 +108,13 @@ class SIFormState extends State<SIForm> {
                       validator: (String value){
                         if(value.isEmpty)
                         {
-                          return 'Enter Term';
+                          return 'Please Enter Term';
+                        }
+                      },
+                      onFieldSubmitted: (String value){
+                        if(value.isEmpty)
+                        {
+                          
                         }
                       },
                       style: textStyle,
